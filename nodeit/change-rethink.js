@@ -33,9 +33,9 @@ r.connect({ host: 'localhost', port: 28015 }, (err, conn)=> {
     // })
     
     // show data per key
-    r.table('realTime').get('481fce20-1ceb-4fa6-8431-3a909ab41e4d').update(
+    r.table('realTime').get('test').update(
         
-      {  key : 'Raul Matadore  '}
+      {  key : 'Phil Dunphy'}
         
     ).run(connection, (err, result)=> {
         if (err) throw err;

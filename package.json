@@ -4,10 +4,13 @@
   "private": true,
   "dependencies": {
     "html-loader": "^0.5.5",
+    "morgan": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router": "^4.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^2.0.4"
   },
   "scripts": {
     "watch": "webpack -d --watch",
