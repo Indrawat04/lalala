@@ -67,13 +67,12 @@ r.connect({ host: 'localhost', port: 28015 }, (err, conn)=> {
     //   })
       
   
-      //chnage feed , emitting
-    r.table('realTime').get('test').changes().run(conn, (err, cursor) =>{
-        cursor.each((err,res)=>{
-            console.log(res)
-        // io.emit('changes',res.new_val.key)
-        // nsp.emit('changes',res.new_val.key)
-        });
-    })
-
-})
+    //   chnage feed , emitting
+      r.table('realTime').get('test').changes().run(conn, (err, cursor) =>{
+          cursor.each((err,res)=>{
+              console.log('change received',res)
+          io.emit('changes',res.new_val.key)
+          // nsp.emit('changes',res.new_val.key)
+          });
+        })
+  })

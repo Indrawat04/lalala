@@ -40,7 +40,6 @@
       //   const socket = io('/selective')
       const socket = io()
         socket.on('changes',(changes)=>{
-            // document.getElementById('text').innerHTML = changes
             console.log('change received',changes)
         })
       </script>

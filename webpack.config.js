@@ -1,5 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
+
 
 var BUILD_DIR = path.resolve(__dirname, 'public/');
 var APP_DIR = path.resolve(__dirname, 'src/');
@@ -31,7 +33,10 @@ var config = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new LiveReloadPlugin()
+    ]
 };
 
 module.exports = config;
