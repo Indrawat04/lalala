@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>
+<script>
+//   const socket = io('/selective')
+const socket = io()
+  socket.on('changes',(changes)=>{
+      document.getElementById('text').innerHTML = changes
+      console.log('change received',changes)
+  })
+</script>
+    </head>
+    <body>
+        <p id="text"></p>
+    </body>
+</html>
